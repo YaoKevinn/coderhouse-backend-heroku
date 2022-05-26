@@ -2,8 +2,11 @@ const express = require('express');
 const os = require("os");
 const numeroCPUs = os.cpus().length;
 
-const ContenedorTest = require('../containers/ProductTestContainer');
-const contenedorTest = new ContenedorTest();
+// const ContenedorTest = require('../containers/ProductTestContainer');
+// const contenedorTest = new ContenedorTest();
+
+const Contenedor = require('../Contenedor');
+const contenedor = new Contenedor('products.txt');
 
 // Process
 const parseArgs = require('minimist');
@@ -23,8 +26,8 @@ router.get('/', (req, res) => {
     }
 });
 
-router.get('/home', isUserLogged, (req, res) => {
-    const products = contenedorTest.getRandomProducts(5);
+router.get('/home', isUserLogged, async (req, res) => {
+    const products = await contenedor.getAll();
     res.render('home', {
         products: products,
         username: req.session.username
