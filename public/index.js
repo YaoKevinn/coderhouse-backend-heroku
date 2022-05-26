@@ -103,7 +103,7 @@ const redirectTo = (destination) => {
 
 // PRODUCT APIs
 const getCurrentProductList = () => {
-    fetch('http://localhost:8080/api/products-test', {
+    fetch('http://localhost:8080/api/productos', {
         method: 'GET',
         headers: {
             "Content-type": "application/json"

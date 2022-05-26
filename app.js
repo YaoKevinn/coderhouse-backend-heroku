@@ -26,9 +26,9 @@ const args = parseArgs(process.argv.slice(2), defaultOptions);
 const handlebars = require("express-handlebars");
 
 // Routers
-// const productsRouter = require('./routes/products');
+const productsRouter = require('./routes/products');
 const conversationsRouter = require("./routes/conversations");
-const productsTestRouter = require("./routes/products-test");
+// const productsTestRouter = require("./routes/products-test");
 const authRouter = require("./routes/auth");
 const sectionRouter = require("./routes/section");
 const randomsRouter = require("./routes/randoms");
@@ -70,9 +70,9 @@ app.set("view engine", "handlebars");
 app.set("socketio", io);
 
 // App: Routers
-// app.use('/api/productos', productsRouter);
+app.use('/api/productos', productsRouter);
 app.use("/api/conversations", registerLog, conversationsRouter);
-app.use("/api/products-test", registerLog, productsTestRouter);
+// app.use("/api/products-test", registerLog, productsTestRouter);
 app.use("/api/auth", registerLog, authRouter);
 // app.use("/api/randoms", registerLog, randomsRouter);
 app.use("", sectionRouter);
