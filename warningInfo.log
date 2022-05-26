@@ -1,5 +1,0 @@
-[2022-05-19T01:02:17.272] [WARN] warn - GET /api/products-tests
-[2022-05-19T01:04:19.581] [WARN] warn - GET /api/products-tests
-[2022-05-19T01:06:16.360] [WARN] warn - GET /api/products-tests
-[2022-05-19T01:06:48.954] [WARN] warn - INVALID API URL: GET /api/products-tests
-[2022-05-19T01:20:11.504] [WARN] warn - Invalid API url: GET /api/products-tests
