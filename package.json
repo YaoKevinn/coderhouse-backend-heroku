@@ -4,10 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "forever start app.js --modo=cluster",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cluster": "npx pm2 start app.js -i max",
-    "kill-all": "npx pm2 delete all"
   },
   "keywords": [],
   "author": "",
