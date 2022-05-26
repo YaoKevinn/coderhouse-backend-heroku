@@ -97,8 +97,9 @@ if (args.modo && args.modo === 'cluster') {
         );
     }   
 } else {
-    httpServer.listen(process.env.PORT || 8080, () =>
-            console.log(`App initialized on port ${args.port} in fork mode...`)
+    const port = process.env.PORT || 8080;
+    httpServer.listen(port, () =>
+            console.log(`App initialized on port ${port}...`)
         );
 }
 

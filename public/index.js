@@ -25,7 +25,7 @@ socket.on('newUserMessage', data => {
 const register = () => {
     const userNameInput = document.getElementById('registerUsernameInput');
     const passwordInput = document.getElementById('registerPasswordInput');
-    fetch('http://localhost:8080/api/auth/register', {
+    fetch('https://coderhouse-backend-yao.herokuapp.com/api/auth/register', {
         method: 'POST',
         headers: {
             "Content-type": "application/json"
@@ -53,7 +53,7 @@ const login = () => {
     const userNameInput = document.getElementById('loginUsernameInput');
     const passwordInput = document.getElementById('loginPasswordInput');
 
-    fetch('http://localhost:8080/api/auth/login', {
+    fetch('https://coderhouse-backend-yao.herokuapp.com/api/auth/login', {
         method: 'POST',
         headers: {
             "Content-type": "application/json"
@@ -73,7 +73,7 @@ const login = () => {
 }
 
 const logout = () => {
-    fetch('http://localhost:8080/api/auth/logout', {
+    fetch('https://coderhouse-backend-yao.herokuapp.com/api/auth/logout', {
         method: 'POST',
         headers: {
             "Content-type": "application/json"
@@ -98,12 +98,12 @@ const logout = () => {
 
 // redirectTo
 const redirectTo = (destination) => {
-    window.location.replace(`http://localhost:8080/${destination}`);
+    window.location.replace(`https://coderhouse-backend-yao.herokuapp.com/${destination}`);
 }
 
 // PRODUCT APIs
 const getCurrentProductList = () => {
-    fetch('http://localhost:8080/api/productos', {
+    fetch('https://coderhouse-backend-yao.herokuapp.com/api/productos', {
         method: 'GET',
         headers: {
             "Content-type": "application/json"
@@ -127,7 +127,7 @@ const addBtnClicked = () => {
         thumbnail: document.getElementById('thumbnailInput').value
     }
     
-    fetch('http://localhost:8080/api/productos', {
+    fetch('https://coderhouse-backend-yao.herokuapp.com/api/productos', {
         method: 'POST',
         body: JSON.stringify(obj),
         headers: {
@@ -160,7 +160,7 @@ addProductToList = (data) => {
 
 // Chat APIs
 const getAllConversations = (updateView = true) => {
-    fetch('http://localhost:8080/api/conversations', {
+    fetch('https://coderhouse-backend-yao.herokuapp.com/api/conversations', {
         method: 'GET',
         headers: {
             "Content-type": "application/json"
